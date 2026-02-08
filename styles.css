@@ -1,0 +1,428 @@
+/* ===================================
+   MODERN ACADEMIC WEBSITE - HOME PAGE
+   =================================== */
+
+/* === RESET & GENERAL === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === HERO SECTION === */
+.hero-home {
+    position: relative;
+    height: 250px; /* Mai scurt */
+    overflow: hidden;
+}
+
+/* Imagini de fundal în linie */
+.background-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 1;
+}
+
+.background-images img {
+    flex: 1;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); /* Puțin mai întunecat */
+}
+
+/* Animație pentru imaginile de fundal */
+.background-images {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Wrapper pentru conținut */
+.hero-content-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 250px;
+    padding: 0 20px;
+}
+
+/* Poza în cerc (stânga) */
+.profile-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+    
+    /* Animație - apare din stânga */
+    animation: slideInLeft 0.4s ease-out;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text (dreapta) */
+.hero-text {
+    background: rgba(26, 77, 122, 0.75);
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    
+    /* Animație - apare din dreapta */
+    animation: slideInRight 0.4s ease-out;
+}
+
+/* === ANIMAȚII === */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .hero-home {
+        height: auto;
+        min-height: 300px;
+    }
+    
+    .hero-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 20px;
+        height: auto;
+    }
+    
+    .profile-circle {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+}
+
+.logo-area {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.95;
+    margin-top: 1rem;
+}
+
+/* === BUTTON GRID SECTION === */
+.button-grid-section {
+    padding: 4rem 0;
+    background-color: #f5f5f5;
+}
+
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center; /* Toate centrate */
+}
+
+.nav-button {
+    width: 350px; /* Lățime mai mare pentru butoane mai late */
+    max-width: 100%;
+}
+
+/* === STYLIZED NAVIGATION BUTTONS === */
+.nav-button {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    
+    /* Background image settings - CHANGE YOUR IMAGES HERE */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Semi-transparent overlay for better text readability */
+.nav-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* 50% transparent white overlay */
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.nav-button:hover::after {
+    background: rgba(255, 255, 255, 0.3); /* Less transparent on hover */
+}
+
+/* Ensure content appears above the overlay */
+.nav-button > * {
+    position: relative;
+    z-index: 2;
+}
+
+.nav-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-button:hover::before {
+    transform: scaleX(1);
+}
+
+.nav-button:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+.button-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-button:hover .button-icon {
+    transform: scale(1.2);
+}
+
+/* === INDIVIDUAL BUTTON BACKGROUNDS === */
+/* Replace the image URLs below with your own images */
+
+/* Button 1: Acasă - REMOVED (no longer a section) */
+
+/* Button 2: Cercetare și publicații */
+.nav-button:nth-child(1) {
+    background-image: url('images/cercetare.jpg');
+}
+
+/* Button 3: Informatică aplicată în turism */
+.nav-button:nth-child(2) {
+    background-image: url('images/informatica.png');
+}
+
+/* Button 4: GIS Applied in Tourism */
+.nav-button:nth-child(3) {
+    background-image: url('images/gis.jpg');
+}
+
+/* Button 5: Metodologia evaluării resurselor turistice */
+.nav-button:nth-child(4) {
+    background-image: url('images/metodologie.jpg');
+}
+
+/* Button 6: Resurse de învățare */
+.nav-button:nth-child(5) {
+    background-image: url('images/resurse.avif');
+}
+
+/* === TEXT STYLING FOR BETTER VISIBILITY === */
+.nav-button h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button p {
+    font-size: 0.95rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+}
+
+/* === CONTACT FOOTER === */
+.contact-footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 3rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.contact-footer h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #5dade2;
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-home {
+        padding: 5rem 0;
+    }
+    
+    .button-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .button-grid-section {
+        padding: 2rem 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-home {
+        padding: 4rem 0;
+    }
+    
+    .nav-button {
+        padding: 2rem 1.5rem;
+    }
+    
+    .nav-button h3 {
+        font-size: 1.2rem;
+    }
+    
+    .button-icon {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatică aplicată în turism - Your Name</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles-pages.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="back-home">← Înapoi la pagina principală</a>
+            <a href="https://www.geo.uaic.ro/" class="nav-logo" target="_blank">Facultatea de Geografie și Geologie</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="page-title">Informatică aplicată în turism</h1>
+                
+                <div class="course-intro">
+                    <p id="saptamana-message"></p>
+                    <p>
+                        Această disciplină își propune să pună o bază solidă în abilitățile digitale de redactare, formatare, 
+                        manipulare a textelor și datelor în baze de date, precum și crearea unor hărți simple într-un software de cartografie.
+                    </p>
+                </div>
+
+                <script>
+                // Returnează numărul săptămânii (1-14), 'vacanță', sau 0 dacă nu e în semestru
+                function getSaptamana() {
+                    const today = new Date();
+                    const saptamani = [
+                        {start: new Date(2026, 1, 2), end: new Date(2026, 1, 8), nr: 5},
+                        //{start: new Date(2026, 1, 16), end: new Date(2026, 1, 22), nr: 1},
+                        {start: new Date(2026, 1, 23), end: new Date(2026, 2, 1), nr: 2},
+                        {start: new Date(2026, 2, 2), end: new Date(2026, 2, 8), nr: 3},
+                        {start: new Date(2026, 2, 9), end: new Date(2026, 2, 15), nr: 4},
+                        {start: new Date(2026, 2, 16), end: new Date(2026, 2, 22), nr: 5},
+                        {start: new Date(2026, 2, 23), end: new Date(2026, 2, 29), nr: 6},
+                        {start: new Date(2026, 2, 30), end: new Date(2026, 3, 5), nr: 7},
+                        {start: new Date(2026, 3, 6), end: new Date(2026, 3, 12), nr: 8},
+                        {start: new Date(2026, 3, 13), end: new Date(2026, 3, 19), nr: 'vacanță'},
+                        {start: new Date(2026, 3, 20), end: new Date(2026, 3, 26), nr: 9},
+                        {start: new Date(2026, 3, 27), end: new Date(2026, 4, 3), nr: 10},
+                        {start: new Date(2026, 4, 4), end: new Date(2026, 4, 10), nr: 11},
+                        {start: new Date(2026, 4, 11), end: new Date(2026, 4, 17), nr: 12},
+                        {start: new Date(2026, 4, 18), end: new Date(2026, 4, 24), nr: 13},
+                        {start: new Date(2026, 4, 25), end: new Date(2026, 4, 31), nr: 14}
+                    ];
+                    
+                    for (let s of saptamani) {
+                        if (today >= s.start && today <= s.end) {
+                            return s.nr; // Returnează 1-14 sau 'vacanță'
+                        }
+                    }
+                    return 0; // Înainte sau după semestru
+                }
+
+                // Afișează mesajul de bun venit
+                function getMesajSaptamana() {
+                    const sapt = getSaptamana();
+                    if (sapt === 'vacanță') {
+                        return 'Săptămâna asta e vacanță!';
+                    } else if (sapt > 0) {
+                        return `Bine ai venit în săptămâna ${sapt}!`;
+                    } else {
+                        return 'Cursul nu a început încă sau s-a terminat.';
+                    }
+                }
+
+                document.getElementById('saptamana-message').textContent = getMesajSaptamana();
+                </script>
+
+                <div class="materials-grid">
+                    <!-- Course Notes -->
+                    <div class="material-card">
+                        <h3>📝 Materiale de seminar</h3>
+                        <ul class="material-list" id="cursuri-list">
+                            <!-- Săptămânile vor apărea aici automat -->
+                        </ul>
+                    </div>
+
+                    <script>
+                    // Link-urile către documentele tale - ÎNLOCUIEȘTE CU LINK-URILE TALE REALE
+                    const linkuriCursuri = {
+                        1: "https://docs.google.com/document/d/1ITAXvW353tvwS2y44esiIVsNKwU8OvyOyJvb5aLzUfQ/edit?usp=sharing",
+                        2: "https://docs.google.com/document/d/1aMlSf4lKy2yXLy_xJCPML8Xp5lSjY-E0akyTJeARxA4/edit?usp=drive_link",
+                        3: "https://docs.google.com/document/d/1htl6klLhQmV_duNOU9O8tnwFEwgwaT97bDITWPI00O0/edit?usp=drive_link",
+                        4: "https://docs.google.com/document/d/1PsQ0wNmH6uqCmVFlvJRb57drbOHPwhCjnupKgwb4lFc/edit?usp=drive_link",
+                        5: "https://docs.google.com/document/d/19wqRA018em6idU40ykkrD1mD8fTrWp35MgyADjqogLM/edit?usp=drive_link",
+                        6: "https://docs.google.com/document/d/1_U0Qg7hFC54bWdv0jxQKolJsOBXx2jQUl478dXfg9kM/edit?usp=drive_link",
+                        7: "https://docs.google.com/document/d/1zF-Ib2N8_rwwMSBBKLkTGaEt7qd2maCH7fhQeqHi4BE/edit?usp=drive_link",
+                        8: "https://docs.google.com/document/d/1Ff6eXB_3nSbJXMaiSsRsl6sFOxebEy2FaHkOvz-XIEw/edit?usp=drive_link",
+                        9: "https://drive.google.com/file/d/LINK-SAPT-9/view",
+                        10: "https://drive.google.com/file/d/LINK-SAPT-10/view",
+                        11: "https://drive.google.com/file/d/LINK-SAPT-11/view",
+                        12: "https://drive.google.com/file/d/LINK-SAPT-12/view",
+                        // 13: "https://drive.google.com/file/d/LINK-SAPT-13/view",
+                        14: "https://drive.google.com/file/d/LINK-SAPT-14/view"
+                    };
+
+                    // Titlurile pentru fiecare săptămână
+                    const titluriCursuri = {
+                        1: "Săptămâna 1 - Microsoft Word",
+                        2: "Săptămâna 2 - Microsoft Word",
+                        3: "Săptămâna 3 - Microsoft Word",
+                        4: "Săptămâna 4 - Microsoft Excel",
+                        5: "Săptămâna 5 - Microsoft Excel",
+                        6: "Săptămâna 6 - ArcGIS Pro",
+                        7: "Săptămâna 7 - ArcGIS Pro",
+                        8: "Săptămâna 8 - ArcGIS Pro",
+                        9: "Săptămâna 9 - ArcGIS Online",
+                        10: "Săptămâna 10 - Story Maps",
+                        11: "Săptămâna 11 - ...",
+                        12: "Săptămâna 12 - Test final",
+                        // 13: "Săptămâna 13 - ...",
+                        14: "Săptămâna 14 - Oră de consultații"
+                    };
+
+                    const currentWeek = getSaptamana();
+                    const list = document.getElementById('cursuri-list');
+
+                    // Dacă e vacanță, afișează doar săptămânile 1-8
+                    if (currentWeek === 'vacanță') {
+                        for (let i = 8; i >= 1; i--) {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.href = linkuriCursuri[i];
+                            a.target = '_blank';
+                            a.textContent = titluriCursuri[i];
+                            li.appendChild(a);
+                            list.appendChild(li);
+                        }
+                    } 
+                    // Dacă e în timpul semestrului
+                    else if (currentWeek > 0) {
+                        // Afișează săptămânile de la cea curentă în jos până la 1
+                        for (let i = currentWeek; i >= 1; i--) {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.href = linkuriCursuri[i];
+                            a.target = '_blank';
+                            a.textContent = titluriCursuri[i];
+                            li.appendChild(a);
+                            list.appendChild(li);
+                        }
+                    } 
+                    // Dacă cursul nu a început încă
+                    else {
+                        list.innerHTML = '<li>Cursurile încep pe 16 februarie 2026</li>';
+                    }
+                    </script>
+
+                    <!-- Assignments -->
+                    <div class="material-card">
+                        <h3>✍️ Teme și proiecte</h3>
+                        <ul class="material-list">
+                            <li>
+                                <a href="materials/tema1.pdf" target="_blank">
+                                    Tema 1 - Microsoft Office
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://drive.google.com/file/d/YOUR-FILE-ID/view" target="_blank">
+                                    Tema 2 - Crearea unei hărți în ArcGIS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.google.com/document/d/YOUR-DOC-ID/edit" target="_blank">
+                                    Indicații test final
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Additional Resources -->
+                    <div class="material-card">
+                        <h3>🌐 Resurse suplimentare</h3>
+                        <ul class="material-list">
+                            <li>
+                                <a href="https://docs.google.com/document/d/119isCKI6tE3VGsPk8w4zwA3EUsw8kKQxa2nS74KTDgc/edit?usp=sharing" target="_blank">
+                                    Microsoft Word - ghid de utilizare
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.google.com/document/d/1Kk8yCHlsNOGYfacL3QQy_QLEMcX_QK9uLjwlXlVHr5k/edit?usp=sharing" target="_blank">
+                                    Microsoft Excel - ghid de utilizare
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.google.com/document/d/1a73jjL0ZtY5UngtbJ-oLj4XhVbrvhkSui5Cxt5Aa6Lo/edit?usp=sharing" target="_blank">
+                                    ArcGIS Pro - ghid de utilizare
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.google.com/document/d/1mUtR2OYyMCzQq0CZ79IiZuET_QxBjnwRve5qzlMz9Oo/edit?usp=sharing" target="_blank">
+                                    Descărcarea datelor de pe Tempo Online
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Course Information Box -->
+                <div class="info-box">
+                    <h3>ℹ️ Informații despre curs</h3>
+                    <p><strong>Ore pe săptămână:</strong> 2 ore curs (profesor titular Lucian Roșu) + 2 ore seminar</p>
+                    <p><strong>Evaluare:</strong> 30% portofoliu de lucru în clasă, 30% temele pentru acasă, 40% test final</p>
+                    <p><strong>Prezență:</strong> Se admit trei absențe pe parcursul semestrului</p>
+                    <p>Pentru întrebări sau probleme tehnice, contacați-mă pe manufosalau99@gmail.com.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="font-size: 0.75rem;">&copy; 2026 Cristian-Manuel Foșalău. All rights reserved.</p>
+        </div>
+    </footer>
