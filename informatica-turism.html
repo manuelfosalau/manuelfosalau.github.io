@@ -37,22 +37,22 @@
                 function getSaptamana() {
                     const today = new Date();
                     const saptamani = [
-                        {start: new Date(2026, 1, 9), end: new Date(2026, 1, 16), nr: 1},
-                        //{start: new Date(2026, 1, 16), end: new Date(2026, 1, 22), nr: 1},
-                        {start: new Date(2026, 1, 23), end: new Date(2026, 2, 1), nr: 2},
-                        {start: new Date(2026, 2, 2), end: new Date(2026, 2, 8), nr: 3},
-                        {start: new Date(2026, 2, 9), end: new Date(2026, 2, 15), nr: 4},
-                        {start: new Date(2026, 2, 16), end: new Date(2026, 2, 22), nr: 5},
-                        {start: new Date(2026, 2, 23), end: new Date(2026, 2, 29), nr: 6},
-                        {start: new Date(2026, 2, 30), end: new Date(2026, 3, 5), nr: 7},
-                        {start: new Date(2026, 3, 6), end: new Date(2026, 3, 12), nr: 8},
-                        {start: new Date(2026, 3, 13), end: new Date(2026, 3, 19), nr: 'vacanță'},
-                        {start: new Date(2026, 3, 20), end: new Date(2026, 3, 26), nr: 9},
-                        {start: new Date(2026, 3, 27), end: new Date(2026, 4, 3), nr: 10},
-                        {start: new Date(2026, 4, 4), end: new Date(2026, 4, 10), nr: 11},
-                        {start: new Date(2026, 4, 11), end: new Date(2026, 4, 17), nr: 12},
-                        {start: new Date(2026, 4, 18), end: new Date(2026, 4, 24), nr: 13},
-                        {start: new Date(2026, 4, 25), end: new Date(2026, 4, 31), nr: 14}
+                        //{start: new Date(2026, 1, 9), end: new Date(2026, 1, 16, 23, 59, 59), nr: 1},
+                        {start: new Date(2026, 1, 16), end: new Date(2026, 1, 22, 23, 59, 59), nr: 1},
+                        {start: new Date(2026, 1, 23), end: new Date(2026, 2, 1, 23, 59, 59), nr: 2},
+                        {start: new Date(2026, 2, 2), end: new Date(2026, 2, 8, 23, 59, 59), nr: 3},
+                        {start: new Date(2026, 2, 9), end: new Date(2026, 2, 15, 23, 59, 59), nr: 4},
+                        {start: new Date(2026, 2, 16), end: new Date(2026, 2, 22, 23, 59, 59), nr: 5},
+                        {start: new Date(2026, 2, 23), end: new Date(2026, 2, 29, 23, 59, 59), nr: 6},
+                        {start: new Date(2026, 2, 30), end: new Date(2026, 3, 5, 23, 59, 59), nr: 7},
+                        {start: new Date(2026, 3, 6), end: new Date(2026, 3, 12, 23, 59, 59), nr:8},
+                        {start: new Date(2026, 3, 13), end: new Date(2026, 3, 19, 23, 59, 59), nr: 'vacanță'},
+                        {start: new Date(2026, 3, 20), end: new Date(2026, 3, 26, 23, 59, 59), nr: 9},
+                        {start: new Date(2026, 3, 27), end: new Date(2026, 4, 3, 23, 59, 59), nr: 10},
+                        {start: new Date(2026, 4, 4), end: new Date(2026, 4, 10, 23, 59, 59), nr: 11},
+                        {start: new Date(2026, 4, 11), end: new Date(2026, 4, 17, 23, 59, 59), nr: 12},
+                        {start: new Date(2026, 4, 18), end: new Date(2026, 4, 24, 23, 59, 59), nr: 13},
+                        {start: new Date(2026, 4, 25), end: new Date(2026, 4, 31, 23, 59, 59), nr: 14}
                     ];
                     
                     for (let s of saptamani) {
@@ -90,20 +90,21 @@
                     <script>
                     // Link-urile către documentele tale - ÎNLOCUIEȘTE CU LINK-URILE TALE REALE
                     const linkuriCursuri = {
-                        1: "https://docs.google.com/document/d/1ITAXvW353tvwS2y44esiIVsNKwU8OvyOyJvb5aLzUfQ/edit?usp=sharing",
-                        2: "https://docs.google.com/document/d/1aMlSf4lKy2yXLy_xJCPML8Xp5lSjY-E0akyTJeARxA4/edit?usp=drive_link",
-                        3: "https://docs.google.com/document/d/1htl6klLhQmV_duNOU9O8tnwFEwgwaT97bDITWPI00O0/edit?usp=drive_link",
-                        4: "https://docs.google.com/document/d/1PsQ0wNmH6uqCmVFlvJRb57drbOHPwhCjnupKgwb4lFc/edit?usp=drive_link",
-                        5: "https://docs.google.com/document/d/19wqRA018em6idU40ykkrD1mD8fTrWp35MgyADjqogLM/edit?usp=drive_link",
-                        6: "https://docs.google.com/document/d/1_U0Qg7hFC54bWdv0jxQKolJsOBXx2jQUl478dXfg9kM/edit?usp=drive_link",
-                        7: "https://docs.google.com/document/d/17_rosQDn9Njmt5KCrRcyzNxWLt4LxsG0vtImtqfLVKY/edit?usp=drive_link",
-                        8: "https://docs.google.com/document/d/1zF-Ib2N8_rwwMSBBKLkTGaEt7qd2maCH7fhQeqHi4BE/edit?usp=drive_link",
-                        9: "https://docs.google.com/document/d/1Ff6eXB_3nSbJXMaiSsRsl6sFOxebEy2FaHkOvz-XIEw/edit?usp=drive_link",
-                        10: "https://docs.google.com/document/d/17sfeu7GMzfz7w-vV8PH8HMaOVK85LXMOX7bU_eAbNpA/edit?usp=drive_link",
-                        11: "https://docs.google.com/document/d/1aUy8PZZfWU5bVjwbDtYR_bu439VS0pzLIgoV5PX-byg/edit?usp=drive_link",
-                        12: "https://drive.google.com/file/d/LINK-SAPT-12/view",
-                        // 13: "https://drive.google.com/file/d/LINK-SAPT-13/view",
-                        14: "https://drive.google.com/file/d/LINK-SAPT-14/view"
+                        1: { url: "https://docs.google.com/document/d/1ITAXvW353tvwS2y44esiIVsNKwU8OvyOyJvb5aLzUfQ/edit?usp=sharing", activ: new Date(2026, 1, 17, 20, 0, 0) },
+                        2: { url: "https://docs.google.com/document/d/1aMlSf4lKy2yXLy_xJCPML8Xp5lSjY-E0akyTJeARxA4/edit?usp=sharing", activ: new Date(2026, 1, 24, 20, 0, 0) },
+                        3: { url: "https://docs.google.com/document/d/1htl6klLhQmV_duNOU9O8tnwFEwgwaT97bDITWPI00O0/edit?usp=sharing", activ: new Date(2026, 1, 31, 20, 0, 0) },
+                        4: { url: "https://docs.google.com/document/d/1PsQ0wNmH6uqCmVFlvJRb57drbOHPwhCjnupKgwb4lFc/edit?usp=sharing", activ: new Date(2026, 2, 7, 20, 0, 0) },
+                        5: { url: "https://docs.google.com/document/d/19wqRA018em6idU40ykkrD1mD8fTrWp35MgyADjqogLM/edit?usp=sharing", activ: new Date(2026, 2, 14, 20, 0, 0) },
+                        6: { url: "https://docs.google.com/document/d/1_U0Qg7hFC54bWdv0jxQKolJsOBXx2jQUl478dXfg9kM/edit?usp=sharing", activ: new Date(2026, 2, 21, 20, 0, 0) },
+                        7: { url: "https://docs.google.com/document/d/17_rosQDn9Njmt5KCrRcyzNxWLt4LxsG0vtImtqfLVKY/edit?usp=sharing", activ: new Date(2026, 2, 28, 20, 0, 0) },
+                        8: { url: "https://docs.google.com/document/d/1zF-Ib2N8_rwwMSBBKLkTGaEt7qd2maCH7fhQeqHi4BE/edit?usp=drive_link", activ: new Date(2026, 3, 5, 20, 0, 0) },
+                        9: { url: "https://docs.google.com/document/d/1Ff6eXB_3nSbJXMaiSsRsl6sFOxebEy2FaHkOvz-XIEw/edit?usp=drive_link", activ: new Date(2026, 3, 12, 20, 0, 0) },
+                        10: { url: "https://docs.google.com/document/d/17sfeu7GMzfz7w-vV8PH8HMaOVK85LXMOX7bU_eAbNpA/edit?usp=drive_link", activ: new Date(2026, 3, 19, 20, 0, 0) },
+                        11: { url: "https://docs.google.com/document/d/1aUy8PZZfWU5bVjwbDtYR_bu439VS0pzLIgoV5PX-byg/edit?usp=drive_link", activ: new Date(2026, 3, 26, 20, 0, 0) },
+                        12: { url: "https://drive.google.com/file/d/LINK-SAPT-12/view", activ: new Date(2026, 4, 3, 20, 0, 0) },
+                        // 13: { url: "https://drive.google.com/file/d/LINK-SAPT-13/view", activ: new Date(YYYY-MM-DD-HH-MM-SS) },
+                        // Example for future weeks:
+                        //   { url: "https://drive.google.com/file/d/LINK-SAPT-XX/view", activ: new Date(YYYY-MM-DD-HH-MM-SS) }
                     };
 
                     // Titlurile pentru fiecare săptămână
@@ -126,17 +127,34 @@
 
                     const linkuriForms = {
                         1: "https://forms.gle/B8ZqZM5y1MdJ2LYGA",
-                        2: "https://forms.gle/LINK-TEMA-2",
-                        3: "https://forms.gle/LINK-TEMA-3",
-                        4: "https://forms.gle/LINK-TEMA-4",
-                        5: "https://forms.gle/LINK-TEMA-5",
-                        6: "https://forms.gle/LINK-TEMA-6",
-                        7: "https://forms.gle/LINK-TEMA-7",
-                        8: "https://forms.gle/LINK-TEMA-8",
-                        9: "https://forms.gle/LINK-TEMA-9",
+                        2: "https://forms.gle/o2BZj5bsUNsRr8Tm6",
+                        3: "https://forms.gle/WDB5yRrwX7CCTFF49",
+                        4: "https://forms.gle/6rMpzCxBexVJuVah6",
+                        5: "https://forms.gle/4bbu8pgrsBzGMZQg6",
+                        6: "https://forms.gle/R9S9nng5UW2KR49h6",
+                        7: "https://forms.gle/4PHhFAvee9QdDB4B7",
+                        8: "https://forms.gle/8Bm3BXsmzVt2eK7M8",
+                        9: "https://forms.gle/sjhzqN2eeJ1VVDQb8",
                         10: "https://forms.gle/LINK-TEMA-10",
                         11: "https://forms.gle/LINK-TEMA-11",
                         12: "https://forms.gle/LINK-TEMA-12"
+                    };
+
+                    const expirareForm = {
+                        1: new Date(2026, 2, 1, 23, 59, 59),  // Sfârșitul săptămânii 2
+                        2: new Date(2026, 2, 8, 23, 59, 59),  // Sfârșitul săptămânii 3
+                        3: new Date(2026, 2, 15, 23, 59, 59),
+                        4: new Date(2026, 2, 22, 23, 59, 59),
+                        5: new Date(2026, 2, 29, 23, 59, 59),
+                        6: new Date(2026, 3, 5, 23, 59, 59),
+                        7: new Date(2026, 3, 12, 23, 59, 59),
+                        8: new Date(2026, 3, 26, 23, 59, 59), // Săptămâna 9 (sare vacanța)
+                        9: new Date(2026, 4, 3, 23, 59, 59),
+                        10: new Date(2026, 4, 10, 23, 59, 59),
+                        11: new Date(2026, 4, 17, 23, 59, 59),
+                        12: new Date(2026, 4, 24, 23, 59, 59),
+                        13: new Date(2026, 4, 31, 23, 59, 59),
+                        14: new Date(2026, 4, 31, 23, 59, 59)
                     };
 
                     const currentWeek = getSaptamana();
@@ -149,7 +167,21 @@
 
                             // Link către tutorial
                             const a = document.createElement('a');
-                            a.href = linkuriCursuri[i];
+                            const now = new Date();
+
+                            if (now >= linkuriCursuri[i].activ) {
+                                // Marți 20:00 a trecut → link activ
+                                a.href = linkuriCursuri[i].url;
+                                a.style.color = '#3498db';
+                            } else {
+                                // Încă nu e marți 20:00 → link inactiv
+                                a.removeAttribute('href');
+                                a.style.color = '#999';
+                                a.style.cursor = 'not-allowed';
+                                a.style.pointerEvents = 'none';
+                                a.title = 'Disponibil marți de la 20:00';
+                            }
+
                             a.target = '_blank';
                             a.textContent = titluriCursuri[i];
                             li.appendChild(a);
@@ -157,13 +189,15 @@
                             // Linie nouă
                             li.appendChild(document.createElement('br'));
 
-                            // Link către Forms
-                            const aForms = document.createElement('a');
-                            aForms.href = linkuriForms[i] || '#';
-                            aForms.target = '_blank';
-                            aForms.textContent = '📤 Predă tema ' + i;
-                            aForms.className = 'btn-link';
-                            li.appendChild(aForms);
+                            // Link către Forms - doar dacă nu a expirat
+                            if (now <= expirareForm[i]) {
+                                const aForms = document.createElement('a');
+                                aForms.href = linkuriForms[i] || '#';
+                                aForms.target = '_blank';
+                                aForms.textContent = '📤 Predă tema ' + i;
+                                aForms.className = 'btn-link';
+                                li.appendChild(aForms);
+                            }       
 
                             list.appendChild(li);
                         }
@@ -176,7 +210,21 @@
 
                             // Link către tutorial
                             const a = document.createElement('a');
-                            a.href = linkuriCursuri[i];
+                            const now = new Date();
+
+                            if (now >= linkuriCursuri[i].activ) {
+                                // Marți 20:00 a trecut → link activ
+                                a.href = linkuriCursuri[i].url;
+                                a.style.color = '#3498db';
+                            } else {
+                                // Încă nu e marți 20:00 → link inactiv
+                                a.removeAttribute('href');
+                                a.style.color = '#999';
+                                a.style.cursor = 'not-allowed';
+                                a.style.pointerEvents = 'none';
+                                a.title = 'Disponibil marți de la 20:00';
+                            }
+
                             a.target = '_blank';
                             a.textContent = titluriCursuri[i];
                             li.appendChild(a);
@@ -184,13 +232,15 @@
                             // Linie nouă
                             li.appendChild(document.createElement('br'));
 
-                            // Link către Forms
-                            const aForms = document.createElement('a');
-                            aForms.href = linkuriForms[i] || '#';
-                            aForms.target = '_blank';
-                            aForms.textContent = '📤 Predă tema ' + i;
-                            aForms.className = 'btn-link';
-                            li.appendChild(aForms);
+                            // Link către Forms - doar dacă nu a expirat
+                            if (now <= expirareForm[i]) {
+                                const aForms = document.createElement('a');
+                                aForms.href = linkuriForms[i] || '#';
+                                aForms.target = '_blank';
+                                aForms.textContent = '📤 Predă tema ' + i;
+                                aForms.className = 'btn-link';
+                                li.appendChild(aForms);
+                            }
 
                             list.appendChild(li);
                         }
@@ -212,7 +262,7 @@
                             <!-- De deblocat după săptămâna 5 -->
 
                             <!--<li>
-                                <a href="materials/tema1.pdf" target="_blank">
+                                <a href="https://docs.google.com/document/d/16ye2EVQCHvGuc_GO82BV1DrgHOtviWyGmzgnFC7VTZ0/edit?usp=sharing" target="_blank">
                                     Tema 1 - Microsoft Office
                                 </a>
                                 <br>
@@ -221,7 +271,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://drive.google.com/file/d/YOUR-FILE-ID/view" target="_blank">
+                                <a href="https://docs.google.com/document/d/1OUjUDclLWY31sLOGy7XzD73iZahpueat4BZ8_dAQCa4/edit?usp=sharing" target="_blank">
                                     Tema 2 - Crearea unei hărți în ArcGIS
                                 </a>
                                 <br>
@@ -239,7 +289,7 @@
 
                     <!-- Additional Resources -->
                     <div class="material-card">
-                        <h3>🌐 Resurse suplimentare</h3>
+                        <h3>🌐 Resurse de învățare</h3>
                         <ul class="material-list">
                             <li>
                                 <a href="https://docs.google.com/document/d/119isCKI6tE3VGsPk8w4zwA3EUsw8kKQxa2nS74KTDgc/edit?usp=sharing" target="_blank">
@@ -269,7 +319,7 @@
                 <div class="info-box">
                     <h3>ℹ️ Informații despre seminar</h3>
                     <p><strong>Ore pe săptămână:</strong> 2 ore seminar + 2 ore curs (profesor titular lect. dr. Lucian Roșu)</p>
-                    <p><strong>Evaluare:</strong> 30% portofoliu de lucru în clasă, 30% temele pentru acasă, 40% test final</p>
+                    <p><strong>Evaluare:</strong> 30% portofoliu de lucru în clasă, 30% temele pentru acasă, 40% test final. Formularele de trimitere a lucrărilor realizate în clasă sunt deschide timp de 2 săptămâni de la data seminarului. Formularele de trimitere a temelor pentru acasă sunt deschise până pe 29 mai inclusiv.</p>
                     <p><strong>Prezență:</strong> Se admit trei absențe pe parcursul semestrului</p>
                     <p>Pentru întrebări sau probleme tehnice, contacați manufosalau99@gmail.com.</p>
                 </div>
