@@ -117,7 +117,7 @@
                         7: "Săptămâna 7 - ArcGIS Pro",
                         8: "Săptămâna 8 - ArcGIS Pro",
                         9: "Săptămâna 9 - ArcGIS Pro",
-                        10: "Săptămâna 10 - ArcGIS Online",
+                        10: "Săptămâna 10 - ArcGIS Pro",
                         11: "Săptămâna 11 - Story Maps",
                         12: "Săptămâna 12 - Test final",
                         // 13: "Săptămâna 13 - ...",
@@ -134,7 +134,7 @@
                         7: "https://forms.gle/4PHhFAvee9QdDB4B7",
                         8: "https://forms.gle/8Bm3BXsmzVt2eK7M8",
                         9: "https://forms.gle/sjhzqN2eeJ1VVDQb8",
-                        10: "https://forms.gle/LINK-TEMA-10",
+                        10: "https://forms.gle/SqXZAe36M56nSaEm8",
                         11: "https://forms.gle/LINK-TEMA-11",
                         12: "https://forms.gle/LINK-TEMA-12"
                     };
@@ -207,7 +207,17 @@
                                 aSpecial.textContent = 'Tabel LP04';
                                 aSpecial.className = 'btn-link';
                                 li.appendChild(aSpecial);
-                            }      
+                            }   
+                            
+                            if (i === 10) {
+                                li.appendChild(document.createElement('br'));
+                                const aSpecial2 = document.createElement('a');
+                                aSpecial2.href = 'https://docs.google.com/document/d/1sY5H_biLzEhd64T6RHPIc2lEl8pCoPCBAXuKNT2rjiM/edit?usp=sharing';
+                                aSpecial2.target = '_blank';
+                                aSpecial2.textContent = 'Pași de lucru individual';
+                                aSpecial2.className = 'btn-link';
+                                li.appendChild(aSpecial2);
+                            }
 
                             list.appendChild(li);
                         }
@@ -269,6 +279,16 @@
                                 aSpecial.textContent = 'Tabel LP04';
                                 aSpecial.className = 'btn-link';
                                 li.appendChild(aSpecial);
+                            }
+
+                            if (i === 10) {
+                                li.appendChild(document.createElement('br'));
+                                const aSpecial2 = document.createElement('a');
+                                aSpecial2.href = 'https://docs.google.com/document/d/1sY5H_biLzEhd64T6RHPIc2lEl8pCoPCBAXuKNT2rjiM/edit?usp=sharing';
+                                aSpecial2.target = '_blank';
+                                aSpecial2.textContent = 'Pași de lucru individual';
+                                aSpecial2.className = 'btn-link';
+                                li.appendChild(aSpecial2);
                             }
 
                             list.appendChild(li);
