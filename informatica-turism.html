@@ -261,7 +261,7 @@
                             li.appendChild(document.createElement('br'));
 
                             // Link către Forms - doar dacă nu a expirat ȘI nu e săptămâna 9
-                            if (i !== 9 && now <= expirareForm[i]) {
+                            if (i !== 9 && i !==10 && now <= expirareForm[i]) {
                                 const aForms = document.createElement('a');
                                 aForms.href = linkuriForms[i] || '#';
                                 aForms.target = '_blank';
